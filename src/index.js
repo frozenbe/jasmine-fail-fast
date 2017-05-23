@@ -134,20 +134,20 @@ function disableSpecs() {
         }
     }
     catch (exception) {
-//        console.log("exception: " + exception);
+        console.log("exception: " + exception);
     }
     if (spec.getFullName().substring(1,6) != idSpecFileToDisable) {
-        return;
+        return spec.enable();
     }
     return spec.disable();
   });
 
-  refs.suites.forEach(function (suite) {
-    suite.beforeFns = [];
-    suite.afterFns = [];
-    suite.beforeAllFns = [];
-    suite.afterAllFns = [];
-  });
+//  refs.suites.forEach(function (suite) {
+//    suite.beforeFns = [];
+//    suite.afterFns = [];
+//    suite.beforeAllFns = [];
+//    suite.afterAllFns = [];
+//  });
 }
 
 
